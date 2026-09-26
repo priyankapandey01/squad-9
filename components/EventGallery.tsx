@@ -5,11 +5,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 const photos = [
-  { src: "https://picsum.photos/seed/lynx-run-1/1200/800", caption: "City Loop Run, September crew" },
-  { src: "https://picsum.photos/seed/lynx-run-2/1200/800", caption: "Sunrise 10K warm-up" },
-  { src: "https://picsum.photos/seed/lynx-rave-1/1200/800", caption: "Run & Rave, dance floor" },
-  { src: "https://picsum.photos/seed/lynx-run-3/1200/800", caption: "Cooldown circuit" },
-  { src: "https://picsum.photos/seed/lynx-rave-2/1200/800", caption: "Flagship night, DJ set" },
+  { src: "/assets/images/IMG_0694.jpg", caption: "City Loop Run, September crew" },
+  { src: "/assets/images/IMG_0571.jpg", caption: "Sunrise 10K warm-up" },
+  { src: "/assets/images/IMG_0535.jpg", caption: "Run & Rave, dance floor" },
+  { src: "/assets/images/IMG_0587.jpg", caption: "Cooldown circuit" },
+  { src: "/assets/images/IMG_0641.jpg", caption: "Flagship night, DJ set" },
 ];
 
 const stats = [
