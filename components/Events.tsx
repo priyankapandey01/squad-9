@@ -6,22 +6,28 @@ import Image from "next/image";
 
 const events = [
   {
-    date: "Oct 5",
+    date: "Oct 4",
     title: "Sunday Run + Rave",
     place: "Venue drops Friday - Noida - 3km",
-    poster: "https://picsum.photos/seed/squad9-poster-1/600/800",
+    poster: "/assets/images/uevent4oct.jpeg",
   },
   {
-    date: "Oct 12",
+    date: "Oct 14",
     title: "Sunday Run + Rave",
     place: "Venue drops Friday - Noida - 3km",
-    poster: "https://picsum.photos/seed/squad9-poster-2/600/800",
+    poster: "/assets/images/uevent14oct.jpeg",
   },
   {
-    date: "Oct 19",
+    date: "Oct 20",
     title: "Sunday Run + Rave",
     place: "Venue drops Friday - Noida - 3km",
-    poster: "https://picsum.photos/seed/squad9-poster-3/600/800",
+    poster: "/assets/images/uevent20oct.jpeg",
+  },
+  {
+    date: "Oct 31",
+    title: "Sunday Run + Rave",
+    place: "Venue drops Friday - Noida - 3km",
+    poster: "/assets/images/uevent31oct.jpeg",
   },
 ];
 
@@ -33,7 +39,7 @@ export default function Events() {
   };
 
   return (
-    <section id="events" className="mx-auto max-w-5xl px-6 py-20">
+    <section id="events" className="mx-auto max-w-5xl px-6 py-4">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
         <div>
           <h2 className="font-display text-3xl font-bold sm:text-4xl">Upcoming Events</h2>

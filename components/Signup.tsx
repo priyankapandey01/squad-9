@@ -1,6 +1,6 @@
 export default function Signup() {
   return (
-    <section id="signup" className="mx-auto max-w-5xl px-6 py-20">
+    <section id="signup" className="mx-auto max-w-5xl px-6 py-4">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
         <h2 className="font-display text-3xl font-bold sm:text-4xl">Sign up for the next one</h2>
         <p className="max-w-xs text-sm text-ink-dim">Fill the form below to lock in your spot.</p>

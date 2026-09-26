@@ -13,9 +13,21 @@ const photos = [
 ];
 
 const stats = [
-  { n: "All Paces", l: "Every runner welcome, beginner to fast", gradient: "from-[#0F7A6A] to-[#14A085]" },
-  { n: "Day & Night", l: "Morning runs, themed night events", gradient: "from-[#7B2D5E] to-[#B8447A]" },
-  { n: "More Than a Run", l: "Music, games, flash mobs, community", gradient: "from-[#3A3D8F] to-[#5B5FC7]" },
+  {
+    n: "All Paces",
+    l: "Every runner welcome, beginner to fast",
+    image: "/assets/images/running1.jpeg",
+  },
+  {
+    n: "Day & Night",
+    l: "Morning runs, themed night events",
+    image: "/assets/images/running2.jpeg",
+  },
+  {
+    n: "More Than a Run",
+    l: "Music, games, flash mobs, community",
+    image: "/assets/images/running3.jpeg",
+  }
 ];
 
 export default function EventGallery() {
@@ -27,7 +39,7 @@ export default function EventGallery() {
   }, []);
 
   return (
-    <section id="gallery" className="mx-auto max-w-5xl px-6 py-20">
+    <section id="gallery" className="mx-auto max-w-5xl px-6 py-4">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
         <h2 className="font-display text-3xl font-bold sm:text-4xl">From the last few runs</h2>
         <p className="max-w-xs text-sm text-ink-dim">A look at what shows up on the group chat after.</p>
@@ -72,19 +84,23 @@ export default function EventGallery() {
       </div>
 
       <div className="mt-14 -mx-6 flex gap-4 overflow-x-auto px-6 pb-3 snap-x snap-mandatory sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:gap-5">
-        {stats.map((s, i) => (
-          <motion.div
+        {stats.map((s) => (
+          <div
             key={s.l}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.6 }}
-            whileHover={{ y: -4 }}
-            transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
-            className={`min-w-[190px] flex-shrink-0 snap-center rounded-2xl bg-gradient-to-br px-5 py-4 text-white shadow-md shadow-black/10 sm:min-w-0 ${s.gradient}`}
+            className="relative min-w-[190px] flex-shrink-0 snap-center overflow-hidden rounded-2xl px-5 py-4 text-white shadow-md shadow-black/10 sm:min-w-0"
+            style={{
+              backgroundImage: `url(${s.image})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
           >
-            <div className="font-display text-lg font-semibold">{s.n}</div>
-            <div className="mt-1 text-xs text-white/85">{s.l}</div>
-          </motion.div>
+            {/* Dark overlay for readable text */}
+            <div className="absolute inset-0 bg-black/40" />
+            <div className="relative z-10">
+              <div className="font-display text-lg font-semibold">{s.n}</div>
+              <div className="mt-1 text-xs text-white/85">{s.l}</div>
+            </div>
+          </div>
         ))}
       </div>
     </section>

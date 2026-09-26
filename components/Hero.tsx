@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-5xl px-6 pb-16 pt-20 sm:pt-24">
+    <section className="mx-auto max-w-5xl px-6 pb-16 pt-8 sm:pt-24">
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}

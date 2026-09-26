@@ -18,7 +18,7 @@ const steps = [
 
 export default function Flow() {
   return (
-    <section id="flow" className="mx-auto max-w-5xl px-6 py-20">
+    <section id="flow" className="mx-auto max-w-5xl px-6 py-4">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
         <h2 className="font-display text-3xl font-bold sm:text-4xl">One night, three gears</h2>
         <p className="max-w-xs text-sm text-ink-dim">

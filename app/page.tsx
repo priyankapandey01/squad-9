@@ -11,10 +11,10 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <Flow />
-      <Activities />
       <EventGallery />
       <Events />
+      <Activities />
+      <Flow />
       <Footer />
     </main>
   );

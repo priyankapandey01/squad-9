@@ -18,7 +18,7 @@ const cards = [
 
 export default function Activities() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-20">
+    <section className="mx-auto max-w-5xl px-6 py-4">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
         <h2 className="font-display text-3xl font-bold sm:text-4xl">Every Pace. Every Person. One Squad.</h2>
         <p className="max-w-xs text-sm text-ink-dim">A community that believes every pace has a place.  What Does It Take to Be Part of Squad 9?
