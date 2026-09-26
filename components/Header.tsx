@@ -1,5 +1,7 @@
+
 export default function Header() {
   return (
+    
     <header className="sticky top-0 z-10 border-b border-line bg-paper/80 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <div className="font-display text-xl font-bold">
@@ -16,6 +18,7 @@ export default function Header() {
         >
           Join a run
         </a>
+      
       </div>
     </header>
   );
