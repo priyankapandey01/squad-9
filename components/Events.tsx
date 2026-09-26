@@ -36,7 +36,7 @@ export default function Events() {
     <section id="events" className="mx-auto max-w-5xl px-6 py-20">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
         <div>
-          <h2 className="font-display text-3xl font-bold sm:text-4xl">Upcoming Sundays</h2>
+          <h2 className="font-display text-3xl font-bold sm:text-4xl">Upcoming Events</h2>
           <p className="mt-2 max-w-xs text-sm text-ink-dim">Show up in trainers, leave in whatever you dance best in.</p>
         </div>
         <div className="hidden gap-2 sm:flex">

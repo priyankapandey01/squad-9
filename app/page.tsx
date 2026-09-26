@@ -4,7 +4,6 @@ import Flow from "@/components/Flow";
 import Activities from "@/components/Activities";
 import EventGallery from "@/components/EventGallery";
 import Events from "@/components/Events";
-import Signup from "@/components/Signup";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -12,9 +11,9 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <EventGallery />
       <Flow />
       <Activities />
+      <EventGallery />
       <Events />
       <Footer />
     </main>
