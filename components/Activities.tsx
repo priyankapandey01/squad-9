@@ -18,11 +18,12 @@ const cards = [
 
 export default function Activities() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-4">
+    <section id="activities" className="mx-auto max-w-5xl px-6 py-4">
       <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
         <h2 className="font-display text-3xl font-bold sm:text-4xl">Every Pace. Every Person. One Squad.</h2>
-        <p className="max-w-xs text-sm text-ink-dim">A community that believes every pace has a place.  What Does It Take to Be Part of Squad 9?
-</p>
+        <p className="max-w-xs text-sm text-ink-dim">
+          A community that believes every pace has a place. What Does It Take to Be Part of Squad 9?
+        </p>
       </div>
       <div className="grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
         {cards.map((c) => (

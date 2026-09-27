@@ -39,9 +39,9 @@ export default function Hero() {
         <a href="#events" className="rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper">
           See upcoming runs
         </a>
-        <a href="#flow" className="rounded-full border border-line px-6 py-3 text-sm">
-          What running rave looks like
-        </a>
+        <a href="#activities" className="rounded-full border border-line px-6 py-3 text-sm">
+  Be a part of the squad9
+</a>
       </div>
     </section>
   );
