@@ -5,12 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#FAF9F6",
-        ink: "#14171F",
-        "ink-dim": "#5B5F6E",
-        line: "#E4E2DB",
-        lime: "#7FA832",
-        magenta: "#C7397A",
+        paper: "#F3F5EF",
+        ink: "#171B18",
+        "ink-dim": "#5C665F",
+        line: "#D9DFD8",
+        lime: "#D4F04C",
+        magenta: "#D3543C",
       },
       fontFamily: {
         display: ["var(--font-display)"],

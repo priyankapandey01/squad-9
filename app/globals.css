@@ -2,11 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --paper: #f3f5ef;
+  --ink: #171b18;
+  --ink-dim: #5c665f;
+  --line: #d9dfd8;
+  --lime: #d4f04c;
+  --magenta: #d3543c;
+}
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  background: #faf9f6;
-  color: #14171f;
+  background: #f3f5ef;
+  color: #171b18;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #d4f04c;
+  color: #171b18;
 }

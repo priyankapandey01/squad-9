@@ -5,103 +5,86 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 const photos = [
-  { src: "/assets/images/IMG_0694.jpg", caption: "City Loop Run, September crew" },
-  { src: "/assets/images/IMG_0571.jpg", caption: "Sunrise 10K warm-up" },
-  { src: "/assets/images/IMG_0535.jpg", caption: "Run & Rave, dance floor" },
-  { src: "/assets/images/IMG_0587.jpg", caption: "Cooldown circuit" },
-  { src: "/assets/images/IMG_0641.jpg", caption: "Flagship night, DJ set" },
-];
-
-const stats = [
-  {
-    n: "All Paces",
-    l: "Every runner welcome, beginner to fast",
-    image: "/assets/images/running1.jpeg",
-  },
-  {
-    n: "Day & Night",
-    l: "Morning runs, themed night events",
-    image: "/assets/images/running2.jpeg",
-  },
-  {
-    n: "More Than a Run",
-    l: "Music, games, flash mobs, community",
-    image: "/assets/images/running3.jpeg",
-  }
+  { src: "/assets/images/IMG_0694.jpg", caption: "City loop, September crew", label: "On the route" },
+  { src: "/assets/images/IMG_0571.jpg", caption: "Sunrise 10K warm-up", label: "First light" },
+  { src: "/assets/images/IMG_0535.jpg", caption: "Run & Rave", label: "Night shift" },
+  { src: "/assets/images/IMG_0587.jpg", caption: "Cooldown circuit", label: "Catch your breath" },
+  { src: "/assets/images/IMG_0641.jpg", caption: "Flagship night, DJ set", label: "One more song" },
 ];
 
 export default function EventGallery() {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => setActive((i) => (i + 1) % photos.length), 4000);
-    return () => clearInterval(id);
+    const interval = setInterval(() => setActive((index) => (index + 1) % photos.length), 5000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <section id="gallery" className="mx-auto max-w-5xl px-6 py-4">
-      <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
-        <h2 className="font-display text-3xl font-bold sm:text-4xl">From the last few runs</h2>
-        <p className="max-w-xs text-sm text-ink-dim">A look at what shows up on the group chat after.</p>
-      </div>
-
-      <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl border border-line sm:aspect-[16/9]">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={photos[active].src}
-            initial={{ opacity: 0, scale: 1.02 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="absolute inset-0"
-          >
-            <Image
-              src={photos[active].src}
-              alt={photos[active].caption}
-              fill
-              sizes="(max-width: 768px) 100vw, 1024px"
-              className="object-cover"
-              priority={active === 0}
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-5">
-              <p className="text-sm text-white">{photos[active].caption}</p>
-            </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
-
-      <div className="mt-4 flex gap-2">
-        {photos.map((p, i) => (
-          <button
-            key={p.src}
-            onClick={() => setActive(i)}
-            aria-label={`Show photo ${i + 1}`}
-            className={`h-1.5 flex-1 rounded-full transition-colors ${
-              i === active ? "bg-ink" : "bg-line"
-            }`}
-          />
-        ))}
-      </div>
-
-      <div className="mt-14 -mx-6 flex gap-4 overflow-x-auto px-6 pb-3 snap-x snap-mandatory sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 sm:gap-5">
-        {stats.map((s) => (
-          <div
-            key={s.l}
-            className="relative min-w-[190px] flex-shrink-0 snap-center overflow-hidden rounded-2xl px-5 py-4 text-white shadow-md shadow-black/10 sm:min-w-0"
-            style={{
-              backgroundImage: `url(${s.image})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          >
-            {/* Dark overlay for readable text */}
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="relative z-10">
-              <div className="font-display text-lg font-semibold">{s.n}</div>
-              <div className="mt-1 text-xs text-white/85">{s.l}</div>
-            </div>
+    <section id="gallery" className="bg-ink text-paper">
+      <div className="mx-auto max-w-7xl px-6 py-10 sm:py-14">
+        <header className="mb-6 grid gap-3 border-b border-white/15 pb-5 sm:grid-cols-[1fr_auto] sm:items-end sm:gap-6 sm:pb-6">
+          <div>
+            <p className="mb-2 text-xs font-bold uppercase text-lime">Squad9 / Moments in motion</p>
+            <h2 className="font-display text-4xl font-bold uppercase leading-[0.9] sm:text-5xl">
+              No two Sundays
+              <br />
+              <span className="text-magenta">look alike.</span>
+            </h2>
           </div>
-        ))}
+          <p className="max-w-xs text-sm leading-6 text-white/65">
+            From first light to last track, here&apos;s a look around the crew.
+          </p>
+        </header>
+
+        <div className="relative aspect-[4/3] overflow-hidden border border-white/10 bg-white/5 sm:aspect-[16/8]">
+          <AnimatePresence mode="wait">
+            <motion.figure
+              key={photos[active].src}
+              initial={{ opacity: 0, scale: 1.015 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={photos[active].src}
+                alt={photos[active].caption}
+                fill
+                sizes="(max-width: 1279px) 100vw, 1280px"
+                className="object-cover"
+                priority={active === 0}
+              />
+              <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+              <figcaption className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-4 sm:p-7">
+                <div>
+                  <p className="mb-2 text-[10px] font-bold uppercase text-lime sm:text-xs">
+                    {String(active + 1).padStart(2, "0")} / {photos[active].label}
+                  </p>
+                  <p className="font-display text-2xl font-bold uppercase leading-[0.95] text-white sm:text-4xl">
+                    {photos[active].caption}
+                  </p>
+                </div>
+                <p className="shrink-0 font-display text-xl font-bold text-white/75 sm:text-2xl">
+                  {String(active + 1).padStart(2, "0")}<span className="text-lime"> / {String(photos.length).padStart(2, "0")}</span>
+                </p>
+              </figcaption>
+            </motion.figure>
+          </AnimatePresence>
+        </div>
+
+        <div aria-hidden="true" className="mt-2 grid grid-cols-5 gap-2">
+          {photos.map((photo, index) => (
+            <div key={photo.src} className="h-1 bg-white/20">
+              <motion.div
+                className={`h-full ${index <= active ? "bg-lime" : "bg-transparent"}`}
+                initial={false}
+                animate={{ width: index < active ? "100%" : index === active ? "100%" : "0%" }}
+                transition={{ duration: index === active ? 5 : 0.2, ease: "linear" }}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
