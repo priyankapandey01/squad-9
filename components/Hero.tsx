@@ -76,7 +76,7 @@ export default function Hero() {
       <div className="relative isolate flex min-h-[480px] items-end overflow-hidden bg-ink sm:min-h-[680px] lg:min-h-[560px]">
         <div aria-hidden="true" className="absolute inset-y-0 left-1/2 z-0 w-full max-w-7xl -translate-x-1/2">
           <Image
-            src="/assets/images/IMG_0571.jpg"
+            src="/assets/images/IMG_0571.webp"
             alt=""
             fill
             priority

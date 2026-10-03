@@ -5,11 +5,11 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 const photos = [
-  { src: "/assets/images/IMG_0694.jpg", caption: "City loop, September crew", label: "On the route" },
-  { src: "/assets/images/IMG_0571.jpg", caption: "Sunrise 10K warm-up", label: "First light" },
-  { src: "/assets/images/IMG_0535.jpg", caption: "Run & Rave", label: "Night shift" },
-  { src: "/assets/images/IMG_0587.jpg", caption: "Cooldown circuit", label: "Catch your breath" },
-  { src: "/assets/images/IMG_0641.jpg", caption: "Flagship night, DJ set", label: "One more song" },
+  { src: "/assets/images/IMG_0694.webp", caption: "City loop, September crew", label: "On the route" },
+  { src: "/assets/images/IMG_0571.webp", caption: "Sunrise 10K warm-up", label: "First light" },
+  { src: "/assets/images/IMG_0535.webp", caption: "Run & Rave", label: "Night shift" },
+  { src: "/assets/images/IMG_0587.webp", caption: "Cooldown circuit", label: "Catch your breath" },
+  { src: "/assets/images/IMG_0641.webp", caption: "Flagship night, DJ set", label: "One more song" },
 ];
 
 export default function EventGallery() {

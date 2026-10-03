@@ -4,12 +4,12 @@ import Image from "next/image";
 const posts = [
   {
     url: "https://www.instagram.com/reel/DdgBhBISbA5/",
-    image: "/assets/images/IMG_0694.jpg",
+    image: "/assets/images/IMG_0694.webp",
     caption: "The crew before the first mile",
   },
   {
     url: "https://www.instagram.com/reel/DdZDJb4yMKY/",
-    image: "/assets/images/IMG_0535.jpg",
+    image: "/assets/images/IMG_0535.webp",
     caption: "When the run turns into a rave",
   },
 ];
@@ -80,7 +80,7 @@ export default function InstagramComments() {
 
       <section className="relative isolate overflow-hidden border-b border-white/10 bg-ink text-white">
         <Image
-          src="/assets/images/IMG_0641.jpg"
+          src="/assets/images/IMG_0641.webp"
           alt="Squad9 runners celebrating together after an event"
           fill
           sizes="100vw"
